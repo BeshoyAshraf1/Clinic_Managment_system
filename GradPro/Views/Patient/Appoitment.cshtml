@@ -1,0 +1,179 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout_Patient.cshtml";
+}
+
+
+<link rel="stylesheet" href="~/css/Appointment.css" asp-append-version="true" />
+@{
+    if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+
+
+
+<div class="containerssss">
+    <div class="appointment-container row">
+        <!-- Appointment Form -->
+        <div class="appointment-form col-md-8">
+            <form id="appointmentForm" asp-action="AddAppointment" asp-controller="patient" method="post">
+                <div class="form-group">
+                    <select id="field" name="Specialty" class="form-control" required>
+                        <option value="" disabled selected>Specialty</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select id="doctor" name="DoctorId" class="form-control" required>
+                        <option value="" disabled selected>Doctor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select id="date" name="AppointmentDate" class="form-control" required>
+                        <option value="" disabled selected>Date</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select id="time" name="AppointmentTime" class="form-control" required>
+                        <option value="" disabled selected>Time</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="Message" class="form-control" rows="4" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Price: <span id="price">N/A</span></label>
+                </div>
+
+                <button type="submit" class="btn-appointment">Make an Appointment +</button>
+            </form>
+        </div>
+
+        <!-- Appointment Info -->
+        <div class="appointment-info col-md-4">
+            <h3>Appointment Data</h3>
+            <p><span class="info-label">Speciality:</span> <span class="info-value" id="infoSpecialty">N/A</span></p>
+            <p><span class="info-label">Doctor:</span> <span class="info-value" id="infoDoctor">N/A</span></p>
+            <p><span class="info-label">Date:</span> <span class="info-value" id="infoDate">N/A</span></p>
+            <p><span class="info-label">Time:</span> <span class="info-value" id="infoTime">N/A</span></p>
+            <p><span class="info-label">Message:</span> <span class="info-value" id="infoMessage">N/A</span></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/Apppoitment.js" asp-append-version="true"></script>
+@section Scripts
+{
+  <script>
+    $(document).ready(function () {
+        // Handle specialty change
+        $('#field').change(function () {
+            var specialty = $(this).val();
+            if (specialty) {
+                $.ajax({
+                    url: '@Url.Action("GetDoctorsBySpecialty", "Patient")',
+                    type: 'GET',
+                    data: { specialty: specialty },
+                    success: function (data) {
+                        var $doctorSelect = $('#doctor');
+                        $doctorSelect.empty();
+                        $doctorSelect.append('<option value="" disabled selected>Select Doctor</option>');
+                        $.each(data, function (index, doctor) {
+                            $doctorSelect.append('<option value="' + doctor.id + '">' + doctor.name + '</option>');
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching doctors:', error);
+                    }
+                });
+            }
+        });
+
+        // Handle doctor change
+        $('#doctor').change(function () {
+            var doctorId = $(this).val();
+            if (doctorId) {
+                $.ajax({
+                    url: '@Url.Action("GetAvailableDates", "Patient")',
+                    type: 'GET',
+                    data: { doctorId: doctorId },
+                    success: function (data) {
+                        var $dateSelect = $('#date');
+                        $dateSelect.empty();
+                        $dateSelect.append('<option value="" disabled selected>Select Date</option>');
+                        $.each(data, function (index, date) {
+                            $dateSelect.append('<option value="' + date.date + '">' + date.date + '</option>');
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching available dates:', error);
+                    }
+                });
+            }
+        });
+
+        // Handle date change
+        $('#date').change(function () {
+            var doctorId = $('#doctor').val();
+            var date = $(this).val();
+            if (doctorId && date) {
+                $.ajax({
+                    url: '@Url.Action("GetAvailableTimes", "Patient")',
+                    type: 'GET',
+                    data: { doctorId: doctorId, date: date },
+                    success: function (data) {
+                        var $timeSelect = $('#time');
+                        $timeSelect.empty();
+                        $timeSelect.append('<option value="" disabled selected>Select Time</option>');
+                        $.each(data, function (index, timeSlot) {
+                            $timeSelect.append('<option value="' + timeSlot.startTime + '">' + timeSlot.startTime + ' - ' + timeSlot.endTime + '</option>');
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching available times:', error);
+                    }
+                });
+            }
+        });
+
+        // Update price when the time is selected
+        $('#time').change(function () {
+            var doctorId = $('#doctor').val();
+            var date = $('#date').val();
+            var time = $(this).val();
+            if (doctorId && date && time) {
+                $.ajax({
+                    url: '@Url.Action("GetPrice", "Patient")',
+                    type: 'GET',
+                    data: { doctorId: doctorId, date: date, time: time },
+                    success: function (data) {
+                        $('#price').text(data.price);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching price:', error);
+                    }
+                });
+            }
+        });
+    });
+
+            </script>
+            }
