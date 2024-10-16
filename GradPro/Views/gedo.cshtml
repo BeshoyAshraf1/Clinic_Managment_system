@@ -1,0 +1,106 @@
+﻿@using DAL.Models
+@model IEnumerable<DAL.Models.Appointment>
+
+@* @model DAL.Models.Appointment
+ *@
+
+ <form asp-action="gedo">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.AppointmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.AppointmentTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReasonForVisit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppointmentDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AppointmentTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReasonForVisit)
+                </td>
+                <td>
+
+                      
+                            <input type="hidden" asp-for="@item.PatientID" />
+
+
+                     @*    <div class="form-group">
+                            <label asp-for="@item.ReasonForVisit" class="control-label"></label>
+                            <input asp-for="@item.ReasonForVisit" class="form-control" />
+                            <span asp-validation-for="@item.ReasonForVisit" class="text-danger"></span>
+                        </div> *@
+@* 
+
+                        <label asp-for="@item.Status" class="control-label"></label>
+                        <select asp-for="@item.Status" class="form-control" asp-items="@Html.GetEnumSelectList<AppointmentStatus>()"></select>
+                        <span asp-validation-for="@item.Status" class="text-danger"></span> *@
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("EditStatus", new { id = item.ID })'">
+                                Update Status
+                            </button>
+                           
+
+                        </div>
+            
+                   
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Patient.Address)
+                </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Staff.Department)
+                    </td>
+
+                <td>
+                </td>
+                @* <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td> *@
+            </tr>
+         
+        }
+    </table>
+    @* <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div> *@
+    </tbody>
+</form>
+    
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
