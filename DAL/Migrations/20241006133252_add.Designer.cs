@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GradPro.Data.Migrations
+namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240830022523_init4")]
-    partial class init4
+    [Migration("20241006133252_add")]
+    partial class add
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,87 @@ namespace GradPro.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("DAL.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Age")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("MedicalHistory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<int?>("gender")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
 
             modelBuilder.Entity("DAL.Models.Appointment", b =>
                 {
@@ -64,7 +145,7 @@ namespace GradPro.Data.Migrations
                         new
                         {
                             ID = 1,
-                            AppointmentDate = new DateTime(2024, 8, 30, 0, 0, 0, 0, DateTimeKind.Local),
+                            AppointmentDate = new DateTime(2024, 10, 7, 0, 0, 0, 0, DateTimeKind.Local),
                             AppointmentTime = new TimeSpan(0, 9, 30, 0, 0),
                             PatientID = 1,
                             ReasonForVisit = "Routine Checkup",
@@ -74,7 +155,7 @@ namespace GradPro.Data.Migrations
                         new
                         {
                             ID = 2,
-                            AppointmentDate = new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Local),
+                            AppointmentDate = new DateTime(2024, 10, 8, 0, 0, 0, 0, DateTimeKind.Local),
                             AppointmentTime = new TimeSpan(0, 14, 0, 0, 0),
                             PatientID = 2,
                             ReasonForVisit = "Skin Rash",
@@ -172,7 +253,7 @@ namespace GradPro.Data.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateTime(2024, 8, 30, 0, 0, 0, 0, DateTimeKind.Local),
+                            Date = new DateTime(2024, 10, 7, 0, 0, 0, 0, DateTimeKind.Local),
                             EndTime = new TimeSpan(0, 12, 0, 0, 0),
                             MaxPatients = 10,
                             StaffId = 1,
@@ -182,7 +263,7 @@ namespace GradPro.Data.Migrations
                         new
                         {
                             Id = 2,
-                            Date = new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Local),
+                            Date = new DateTime(2024, 10, 8, 0, 0, 0, 0, DateTimeKind.Local),
                             EndTime = new TimeSpan(0, 16, 0, 0, 0),
                             MaxPatients = 8,
                             StaffId = 2,
@@ -192,7 +273,7 @@ namespace GradPro.Data.Migrations
                         new
                         {
                             Id = 3,
-                            Date = new DateTime(2024, 9, 1, 0, 0, 0, 0, DateTimeKind.Local),
+                            Date = new DateTime(2024, 10, 9, 0, 0, 0, 0, DateTimeKind.Local),
                             EndTime = new TimeSpan(0, 14, 0, 0, 0),
                             MaxPatients = 12,
                             StaffId = 3,
@@ -242,7 +323,7 @@ namespace GradPro.Data.Migrations
                     b.HasData(
                         new
                         {
-                            ID = 2,
+                            ID = 1,
                             Address = "789 Oak St",
                             Age = 30,
                             Email = "alice@example.com",
@@ -253,7 +334,7 @@ namespace GradPro.Data.Migrations
                         },
                         new
                         {
-                            ID = 3,
+                            ID = 2,
                             Address = "321 Pine St",
                             Age = 45,
                             Email = "bob@example.com",
@@ -440,12 +521,10 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -457,12 +536,10 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -480,18 +557,9 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", "security");
                 });
@@ -524,12 +592,10 @@ namespace GradPro.Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -566,12 +632,10 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -644,7 +708,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -653,7 +717,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -668,7 +732,7 @@ namespace GradPro.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -677,7 +741,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

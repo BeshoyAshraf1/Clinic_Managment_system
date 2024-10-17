@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GradPro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+538016d5ccb3c608ba7b386ef7a72377285dc7b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("GradPro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GradPro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
