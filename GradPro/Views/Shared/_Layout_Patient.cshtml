@@ -22,8 +22,10 @@
     <header>
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg shadow-sm">
-            <div class="container">
-                <a id="anchortext" class="navbar-brand" href="#">
+            @if (@User.Identity.IsAuthenticated)
+            {
+                <div class="container">
+                    <a id="anchortext" class="navbar-brand" href="#">
                     <img src="~/images/logo.png" alt="Clinic Logo" width="40" height="40" class="d-inline-block align-text-top">
                     Clinic Name
                 </a>
@@ -67,19 +69,48 @@
                         <li class="nav-item dropdown">
                             <a id="anchortext" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="User Account">
-                                <i class="fas fa-user"></i>
+                                    <i class="fas fa-user"></i>@User.Identity.Name
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
                             </ul>
+                          
                         </li>
                     </ul>
                 </div>
             </div>
+            }
+            else
+            {
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                           @*  <li class="nav-item">
+                                <a id="anchortext" class="nav-link active" aria-current="page" href="~/Role/Index">
+                                    <i class="fas fa-lock"></i>Roles
+                                </a>
+
+                            </li> *@ 
+                            <li class="nav-item">
+                                <a id="anchortext" class="nav-link active" aria-current="page" href="~/Account/Register">
+                                    <i class="fas fa-user-plus"></i>Register
+                                </a>
+                               
+                            </li>
+                            <li class="nav-item">
+                                <a id="anchortext" class="nav-link active" aria-current="page" href="~/Account/Login">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            }
         </nav>
 
     </header>

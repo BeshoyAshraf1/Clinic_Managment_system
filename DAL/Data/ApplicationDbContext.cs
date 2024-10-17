@@ -1,17 +1,22 @@
 ﻿using DAL.Models;
+using GradPro.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using System.Data;
 namespace GradPro.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext :IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
+       
+        public ApplicationDbContext() : base()
+        {
+
+        }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+           : base(options)
         {
         }
-
         public DbSet<Appointment> Appointments { get; set; }
 
         public DbSet<Clinic> Clinics { get; set; }
@@ -43,6 +48,13 @@ namespace GradPro.Data
             modelBuilder.Entity<IdentityUserToken<string>>()
 .ToTable("UserTokens", "security");
 
+            //IdentityRole
+            modelBuilder.Entity<IdentityRole>().HasData(
+          new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
+          new IdentityRole { Id = "2", Name = "Patient", NormalizedName = "PATIENT" },
+          new IdentityRole { Id = "3", Name = "Staff", NormalizedName = "STAFF" },
+          new IdentityRole { Id = "4", Name = "Clinic", NormalizedName = "CLINIC" }
+      );
             // Seed Clinics
             modelBuilder.Entity<Clinic>().HasData(
                 new Clinic { ID = 1, Name = "City Health Clinic", Address = "123 Main St", PhoneNumber = "123-456-7890", Email = "info@cityhealth.com", Location = "Downtown" },
