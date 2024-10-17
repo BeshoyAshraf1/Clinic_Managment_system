@@ -1,303 +1,303 @@
 {
   "Files": [
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GradPro.bundle.scp.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GradPro.bundle.scp.css",
       "PackagePath": "staticwebassets\\GradPro.bundle.scp.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\css\\Appointment.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\css\\Appointment.css",
       "PackagePath": "staticwebassets\\css\\Appointment.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\css\\Layout.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\css\\Layout.css",
       "PackagePath": "staticwebassets\\css\\Layout.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\css\\appoitmentdata.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\css\\appoitmentdata.css",
       "PackagePath": "staticwebassets\\css\\appoitmentdata.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\css\\site.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\favicon.ico",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\about.png",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\about.png",
       "PackagePath": "staticwebassets\\images\\about.png"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\hospital1.jpg",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\hospital1.jpg",
       "PackagePath": "staticwebassets\\images\\hospital1.jpg"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\hospital2.jpg",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\hospital2.jpg",
       "PackagePath": "staticwebassets\\images\\hospital2.jpg"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\hospital3.jpg",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\hospital3.jpg",
       "PackagePath": "staticwebassets\\images\\hospital3.jpg"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\img1.png",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\img1.png",
       "PackagePath": "staticwebassets\\images\\img1.png"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\img2.png",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\img2.png",
       "PackagePath": "staticwebassets\\images\\img2.png"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\img3.jpg",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\img3.jpg",
       "PackagePath": "staticwebassets\\images\\img3.jpg"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\img3.png",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\img3.png",
       "PackagePath": "staticwebassets\\images\\img3.png"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\logo.png",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\logo.png",
       "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\images\\photo-modern-medical-clinic-interior-high-quality-details-8k-full-ultra-hd-ar-169-v-52-job-id-324652.jpg",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\images\\photo-modern-medical-clinic-interior-high-quality-details-8k-full-ultra-hd-ar-169-v-52-job-id-324652.jpg",
       "PackagePath": "staticwebassets\\images\\photo-modern-medical-clinic-interior-high-quality-details-8k-full-ultra-hd-ar-169-v-52-job-id-324652.jpg"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\js\\Apppoitment.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\js\\Apppoitment.js",
       "PackagePath": "staticwebassets\\js\\Apppoitment.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\js\\site.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\Assignments_Depi\\Gradprodepi\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

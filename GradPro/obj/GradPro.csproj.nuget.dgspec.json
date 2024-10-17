@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\GradPro\\GradPro.csproj": {}
+    "D:\\DEBI\\Clinic_Managment_system\\GradPro\\GradPro.csproj": {}
   },
   "projects": {
-    "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\BLL.csproj": {
+    "D:\\DEBI\\Clinic_Managment_system\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\DEBI\\Clinic_Managment_system\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\MR.X2\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\obj\\",
+        "projectPath": "D:\\DEBI\\Clinic_Managment_system\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\Amal\\.nuget\\packages\\",
+        "outputPath": "D:\\DEBI\\Clinic_Managment_system\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MR.X2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj"
+              "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj"
               }
             }
           }
@@ -38,11 +39,30 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.1.39, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,21 +79,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj": {
+    "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\MR.X2\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\obj\\",
+        "projectPath": "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Amal\\.nuget\\packages\\",
+        "outputPath": "D:\\DEBI\\Clinic_Managment_system\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MR.X2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,6 +101,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,13 +114,26 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.1.39, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
@@ -124,21 +158,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\GradPro\\GradPro.csproj": {
+    "D:\\DEBI\\Clinic_Managment_system\\GradPro\\GradPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\GradPro\\GradPro.csproj",
+        "projectUniqueName": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\GradPro.csproj",
         "projectName": "GradPro",
-        "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\GradPro\\GradPro.csproj",
-        "packagesPath": "C:\\Users\\MR.X2\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\GradPro\\obj\\",
+        "projectPath": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\GradPro.csproj",
+        "packagesPath": "C:\\Users\\Amal\\.nuget\\packages\\",
+        "outputPath": "D:\\DEBI\\Clinic_Managment_system\\GradPro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MR.X2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,17 +180,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\BLL.csproj": {
-                "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\BLL\\BLL.csproj"
+              "D:\\DEBI\\Clinic_Managment_system\\BLL\\BLL.csproj": {
+                "projectPath": "D:\\DEBI\\Clinic_Managment_system\\BLL\\BLL.csproj"
               },
-              "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Assignments_Depi\\New folder (2)\\Gradprodepi\\DAL\\DAL.csproj"
+              "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\DEBI\\Clinic_Managment_system\\DAL\\DAL.csproj"
               }
             }
           }
@@ -165,6 +200,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -179,11 +219,19 @@
               "target": "Package",
               "version": "[8.0.8, )"
             },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.1.39, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
             },
@@ -203,7 +251,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             }
           },
           "imports": [
@@ -225,7 +273,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
