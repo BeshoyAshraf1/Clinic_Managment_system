@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace GradPro.Data.Migrations
+namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240823033130_init1")]
-    partial class init1
+    [Migration("20241016203441_Add-Register_Columns")]
+    partial class AddRegister_Columns
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,87 @@ namespace GradPro.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("DAL.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Age")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("MedicalHistory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<int?>("gender")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
 
             modelBuilder.Entity("DAL.Models.Appointment", b =>
                 {
@@ -39,9 +120,6 @@ namespace GradPro.Data.Migrations
                     b.Property<TimeSpan>("AppointmentTime")
                         .HasColumnType("time");
 
-                    b.Property<int>("DoctorID")
-                        .HasColumnType("int");
-
                     b.Property<int>("PatientID")
                         .HasColumnType("int");
 
@@ -49,16 +127,41 @@ namespace GradPro.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StaffID")
+                        .HasColumnType("int");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("DoctorID");
-
                     b.HasIndex("PatientID");
 
+                    b.HasIndex("StaffID");
+
                     b.ToTable("Appointments");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            AppointmentDate = new DateTime(2024, 10, 17, 0, 0, 0, 0, DateTimeKind.Local),
+                            AppointmentTime = new TimeSpan(0, 9, 30, 0, 0),
+                            PatientID = 1,
+                            ReasonForVisit = "Routine Checkup",
+                            StaffID = 1,
+                            Status = 0
+                        },
+                        new
+                        {
+                            ID = 2,
+                            AppointmentDate = new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            AppointmentTime = new TimeSpan(0, 14, 0, 0, 0),
+                            PatientID = 2,
+                            ReasonForVisit = "Skin Rash",
+                            StaffID = 2,
+                            Status = 0
+                        });
                 });
 
             modelBuilder.Entity("DAL.Models.Clinic", b =>
@@ -72,9 +175,6 @@ namespace GradPro.Data.Migrations
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Departments")
-                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -95,6 +195,91 @@ namespace GradPro.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Clinics");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Address = "123 Main St",
+                            Email = "info@cityhealth.com",
+                            Location = "Downtown",
+                            Name = "City Health Clinic",
+                            PhoneNumber = "123-456-7890"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Address = "456 Elm St",
+                            Email = "contact@suburbanhealth.com",
+                            Location = "Suburb",
+                            Name = "Suburban Health Clinic",
+                            PhoneNumber = "987-654-3210"
+                        });
+                });
+
+            modelBuilder.Entity("DAL.Models.DoctorSchedule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("MaxPatients")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StaffId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<double>("price")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StaffId");
+
+                    b.ToTable("DoctorSchedules");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Date = new DateTime(2024, 10, 17, 0, 0, 0, 0, DateTimeKind.Local),
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            MaxPatients = 10,
+                            StaffId = 1,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
+                            price = 200.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Date = new DateTime(2024, 10, 18, 0, 0, 0, 0, DateTimeKind.Local),
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            MaxPatients = 8,
+                            StaffId = 2,
+                            StartTime = new TimeSpan(0, 13, 0, 0, 0),
+                            price = 180.0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Date = new DateTime(2024, 10, 19, 0, 0, 0, 0, DateTimeKind.Local),
+                            EndTime = new TimeSpan(0, 14, 0, 0, 0),
+                            MaxPatients = 12,
+                            StaffId = 3,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0),
+                            price = 220.0
+                        });
                 });
 
             modelBuilder.Entity("DAL.Models.Patient", b =>
@@ -134,6 +319,30 @@ namespace GradPro.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Patients");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Address = "789 Oak St",
+                            Age = 30,
+                            Email = "alice@example.com",
+                            Gender = 1,
+                            Name = "Alice Johnson",
+                            PhoneNumber = "555-2345",
+                            medicalhistory = "No significant medical history"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Address = "321 Pine St",
+                            Age = 45,
+                            Email = "bob@example.com",
+                            Gender = 0,
+                            Name = "Bob Williams",
+                            PhoneNumber = "555-6789",
+                            medicalhistory = "Hypertension"
+                        });
                 });
 
             modelBuilder.Entity("DAL.Models.Pharmacy", b =>
@@ -185,11 +394,6 @@ namespace GradPro.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasMaxLength(8)
-                        .HasColumnType("nvarchar(8)");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -205,6 +409,9 @@ namespace GradPro.Data.Migrations
                     b.Property<int>("Position")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Specialty")
+                        .HasColumnType("int");
+
                     b.Property<double?>("salary")
                         .HasColumnType("float");
 
@@ -214,9 +421,43 @@ namespace GradPro.Data.Migrations
 
                     b.ToTable("Staffs");
 
-                    b.HasDiscriminator().HasValue("Staff");
-
-                    b.UseTphMappingStrategy();
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            ClinicID = 1,
+                            Department = "Cardiology",
+                            Email = "johndoe@clinic.com",
+                            Name = "Dr. John Doe",
+                            PhoneNumber = "555-1234",
+                            Position = 0,
+                            Specialty = 0,
+                            salary = 150000.0
+                        },
+                        new
+                        {
+                            ID = 2,
+                            ClinicID = 1,
+                            Department = "Dermatology",
+                            Email = "janesmith@clinic.com",
+                            Name = "Dr. Jane Smith",
+                            PhoneNumber = "555-5678",
+                            Position = 0,
+                            Specialty = 1,
+                            salary = 140000.0
+                        },
+                        new
+                        {
+                            ID = 3,
+                            ClinicID = 2,
+                            Department = "Neurology",
+                            Email = "emilybrown@clinic.com",
+                            Name = "Dr. Emily Brown",
+                            PhoneNumber = "555-8765",
+                            Position = 0,
+                            Specialty = 5,
+                            salary = 155000.0
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -243,7 +484,33 @@ namespace GradPro.Data.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("Roles", "security");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "2",
+                            Name = "Patient",
+                            NormalizedName = "PATIENT"
+                        },
+                        new
+                        {
+                            Id = "3",
+                            Name = "staff",
+                            NormalizedName = "STAFF"
+                        },
+                        new
+                        {
+                            Id = "4",
+                            Name = "clinic",
+                            NormalizedName = "CLINIC"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -268,7 +535,7 @@ namespace GradPro.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", (string)null);
+                    b.ToTable("RoleClaims", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
@@ -280,12 +547,10 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -297,12 +562,10 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -320,20 +583,11 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
+                    b.ToTable("Users", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -358,18 +612,16 @@ namespace GradPro.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", (string)null);
+                    b.ToTable("UserClaims", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -382,7 +634,7 @@ namespace GradPro.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", (string)null);
+                    b.ToTable("UserLogins", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -397,7 +649,7 @@ namespace GradPro.Data.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", (string)null);
+                    b.ToTable("UserRoles", "security");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -406,52 +658,47 @@ namespace GradPro.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("DAL.Models.Doctor", b =>
-                {
-                    b.HasBaseType("DAL.Models.Staff");
-
-                    b.Property<string>("Specialty")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("price")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Doctor");
+                    b.ToTable("UserTokens", "security");
                 });
 
             modelBuilder.Entity("DAL.Models.Appointment", b =>
                 {
-                    b.HasOne("DAL.Models.Doctor", "Doctor")
-                        .WithMany("Appointments")
-                        .HasForeignKey("DoctorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("DAL.Models.Patient", "Patient")
                         .WithMany("Appointments")
                         .HasForeignKey("PatientID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Doctor");
+                    b.HasOne("DAL.Models.Staff", "Staff")
+                        .WithMany("Appointments")
+                        .HasForeignKey("StaffID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Patient");
+
+                    b.Navigation("Staff");
+                });
+
+            modelBuilder.Entity("DAL.Models.DoctorSchedule", b =>
+                {
+                    b.HasOne("DAL.Models.Staff", "Staff")
+                        .WithMany("Schedules")
+                        .HasForeignKey("StaffId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Staff");
                 });
 
             modelBuilder.Entity("DAL.Models.Pharmacy", b =>
@@ -487,7 +734,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -496,7 +743,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -511,7 +758,7 @@ namespace GradPro.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -520,7 +767,7 @@ namespace GradPro.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("DAL.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -539,9 +786,11 @@ namespace GradPro.Data.Migrations
                     b.Navigation("Appointments");
                 });
 
-            modelBuilder.Entity("DAL.Models.Doctor", b =>
+            modelBuilder.Entity("DAL.Models.Staff", b =>
                 {
                     b.Navigation("Appointments");
+
+                    b.Navigation("Schedules");
                 });
 #pragma warning restore 612, 618
         }

@@ -14,7 +14,7 @@ namespace GradPro.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+        public IActionResult Index(Guid? Id)
         {
             return View();
         }

@@ -22,3 +22,16 @@ D:\Assignments_Depi\Gradprodepi\DAL\obj\Debug\net8.0\DAL.dll
 D:\Assignments_Depi\Gradprodepi\DAL\obj\Debug\net8.0\refint\DAL.dll
 D:\Assignments_Depi\Gradprodepi\DAL\obj\Debug\net8.0\DAL.pdb
 D:\Assignments_Depi\Gradprodepi\DAL\obj\Debug\net8.0\ref\DAL.dll
+D:\DEBI\Clinic_Managment_system\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\DEBI\Clinic_Managment_system\DAL\bin\Debug\net8.0\DAL.dll
+D:\DEBI\Clinic_Managment_system\DAL\bin\Debug\net8.0\DAL.pdb
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.dll
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\DAL.pdb
+D:\DEBI\Clinic_Managment_system\DAL\obj\Debug\net8.0\ref\DAL.dll
